@@ -1,0 +1,12 @@
+{
+  "name": "dht-spider-bin",
+  "bin": "main.js",
+  "version": "0.0.1",
+  "description": "Find torrents in dht network",
+  "author": "zella",
+  "license": "MIT",
+  "dependencies": {
+    "dhtspider": "zella/dhtspider#master",
+    "better-sqlite3": "5.4.3"
+  }
+}

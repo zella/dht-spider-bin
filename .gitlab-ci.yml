@@ -1,0 +1,15 @@
+stages:
+  - build
+
+build-binary:
+  stage: build
+  image: "node:12"
+  before_script:
+    - npm install -g pkg@4.4.0
+  script:
+    - npm install
+    - pkg --targets node12-linux-x64,node12-macos-x64,node12-win-x64,node12-win-x86,node12-armv7 --no-bytecode --out-path bin .
+  artifacts:
+    paths:
+    - bin/
+    expire_in: 1 week
